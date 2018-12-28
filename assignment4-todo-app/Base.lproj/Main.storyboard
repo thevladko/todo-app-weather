@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Todos View Controller-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="TodosViewController" customModule="assignment4_todo_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="7tw-MO-y6H"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1689" y="-1093"/>
+        </scene>
+        <!--Add Todo View Controller-->
+        <scene sceneID="s33-Rj-u2X">
+            <objects>
+                <viewController storyboardIdentifier="AddTodoViewController" id="q6h-ze-CoX" customClass="AddTodoViewController" customModule="assignment4_todo_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="H6k-d4-fPW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Jbe-be-9XL">
+                                <rect key="frame" x="0.0" y="342" width="375" height="180"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="aFp-a0-vzf"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="553529791.64462996">
+                                    <!--2018-07-17 14:16:31 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Due date:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWH-qx-wbH">
+                                <rect key="frame" x="0.0" y="291" width="375" height="43"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="hxz-zM-4c1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55z-Ah-Neq">
+                                <rect key="frame" x="152" y="552" width="71" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addTodo:" destination="q6h-ze-CoX" eventType="touchUpInside" id="Hg4-l7-Sht"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Todo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ry4-IN-I6o">
+                                <rect key="frame" x="0.0" y="142" width="375" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="4Rf-Ze-Dnh" firstAttribute="bottom" secondItem="55z-Ah-Neq" secondAttribute="bottom" constant="85" id="9p2-AQ-2dW"/>
+                            <constraint firstItem="hWH-qx-wbH" firstAttribute="leading" secondItem="4Rf-Ze-Dnh" secondAttribute="leading" id="CQU-ji-UzI"/>
+                            <constraint firstItem="55z-Ah-Neq" firstAttribute="top" secondItem="Jbe-be-9XL" secondAttribute="bottom" constant="30" id="D7l-vh-Pn7"/>
+                            <constraint firstItem="4Rf-Ze-Dnh" firstAttribute="trailing" secondItem="55z-Ah-Neq" secondAttribute="trailing" constant="152" id="F96-r9-JTf"/>
+                            <constraint firstItem="hWH-qx-wbH" firstAttribute="trailing" secondItem="4Rf-Ze-Dnh" secondAttribute="trailing" id="SHb-D7-kWh"/>
+                            <constraint firstItem="Jbe-be-9XL" firstAttribute="trailing" secondItem="4Rf-Ze-Dnh" secondAttribute="trailing" id="WWT-uX-Y4I"/>
+                            <constraint firstItem="Ry4-IN-I6o" firstAttribute="leading" secondItem="4Rf-Ze-Dnh" secondAttribute="leading" id="auf-we-3to"/>
+                            <constraint firstItem="Jbe-be-9XL" firstAttribute="leading" secondItem="4Rf-Ze-Dnh" secondAttribute="leading" id="hpD-Qh-e4g"/>
+                            <constraint firstItem="55z-Ah-Neq" firstAttribute="leading" secondItem="4Rf-Ze-Dnh" secondAttribute="leading" constant="152" id="moQ-1e-Jwg"/>
+                            <constraint firstItem="Jbe-be-9XL" firstAttribute="top" secondItem="hWH-qx-wbH" secondAttribute="bottom" constant="8" id="oq5-lr-5u0"/>
+                            <constraint firstItem="Ry4-IN-I6o" firstAttribute="trailing" secondItem="4Rf-Ze-Dnh" secondAttribute="trailing" id="pJc-I5-w12"/>
+                            <constraint firstItem="Ry4-IN-I6o" firstAttribute="top" secondItem="H6k-d4-fPW" secondAttribute="top" constant="142" id="sZZ-td-HvF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4Rf-Ze-Dnh"/>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="Jbe-be-9XL" id="L73-8d-OOm"/>
+                        <outlet property="todoTextField" destination="Ry4-IN-I6o" id="dwJ-7O-F4m"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gnC-Oz-KEk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2560.8000000000002" y="-1093.4032983508246"/>
+        </scene>
+        <!--Completed View Controller-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="CompletedViewController" customModule="assignment4_todo_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ULt-39-nPg"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1689" y="-322"/>
+        </scene>
+        <!--Weather View Controller-->
+        <scene sceneID="Hhk-zO-9pk">
+            <objects>
+                <viewController id="Zm3-fX-b95" customClass="WeatherViewController" customModule="assignment4_todo_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="in1-xn-bwm"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zwd-9W-kAg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1689" y="454"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="E3j-1i-ecr" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="W1y-XE-fZl" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                        <segue destination="xlu-AU-Lan" kind="relationship" relationship="viewControllers" id="cpv-F4-RsK"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="0.0"/>
+        </scene>
+        <!--Todos-->
+        <scene sceneID="bpV-KB-Vsp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="E3j-1i-ecr" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Todos" image="first" id="acW-dT-cKf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="sE6-Gy-KvD">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="8QN-tk-JEa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KFx-27-KyO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="809" y="-1093"/>
+        </scene>
+        <!--Completed-->
+        <scene sceneID="ziC-i3-4Ba">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="W1y-XE-fZl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Completed" image="second" id="cPa-gy-q4n"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ETi-az-ZDQ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="2YF-ih-8lF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UWM-1q-yj0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="809" y="-321"/>
+        </scene>
+        <!--Weather-->
+        <scene sceneID="o6M-N4-lqJ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xlu-AU-Lan" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Weather" image="first" id="w9a-KH-mPe"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yC3-hB-Sqp">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Zm3-fX-b95" kind="relationship" relationship="rootViewController" id="8IF-NC-9yj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Yy-fT-Su4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="809" y="454"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="first" width="30" height="30"/>
+        <image name="second" width="30" height="30"/>
+    </resources>
+</document>
